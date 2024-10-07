@@ -1,1 +1,2 @@
 # StrukturePodataka
+commit from phone
