@@ -85,6 +85,26 @@ void PrintList(osoba head) {
 	}
 }
 
+void RemovePerson(osoba* head, int position) {
+	int i;
+	osoba* brisana;
+
+	if (position == 0) {
+		brisana = head->next;
+		head->next = brisana->next;
+		free(brisana);
+	}
+	else {
+		for (i = 0; i < position - 1; i++)
+		{
+			head = head->next;
+		}
+		brisana = head->next;
+		head->next = brisana->next;
+		free(brisana);
+	}
+}
+
 
 int main()
 {
@@ -104,6 +124,8 @@ int main()
 	pravljenje = CreateOsoba(temp1.ime, temp1.prezime, temp1.god);
 	AddToEnd(&head, pravljenje);
 
+	PrintList(head);
+	RemovePerson(&head, 2);
 	PrintList(head);
 
 	DeleteList(&head);
