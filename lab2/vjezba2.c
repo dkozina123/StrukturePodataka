@@ -95,7 +95,7 @@ void RemovePerson(osoba* head, int position) {
 		free(brisana);
 	}
 	else {
-		for (i = 0; i < position - 1; i++)
+		for (i = 0; i < position; i++)
 		{
 			head = head->next;
 		}
@@ -125,7 +125,7 @@ int main()
 	AddToEnd(&head, pravljenje);
 
 	PrintList(head);
-	RemovePerson(&head, 2);
+	RemovePerson(&head, 1);
 	PrintList(head);
 
 	DeleteList(&head);
