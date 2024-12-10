@@ -1,0 +1,6 @@
+2024-9-6
+drva 1 10
+rukavice 4 0.2
+olovka 2 1
+ravnalo 1 1.5
+drvofiks 1 7.5

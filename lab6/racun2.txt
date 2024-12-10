@@ -1,0 +1,7 @@
+2023-6-12
+jabuka 2 0.8
+kumpir 10 0.5
+batak 3 3.1
+kumpir 6 0.5
+rukavice 2 0.2
+
