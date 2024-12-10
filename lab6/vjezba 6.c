@@ -86,12 +86,12 @@ int UcitajRacune(racunposition head) {
 		}
 		fscanf(dat2, "%[^\n]s", temp->datum);
 		if (UbaciSortiranoRacun(head, temp) == EXIT_FAILURE) {
-			racunposition help = head->next;
-			while (UsporediDatume(help, temp) != DATUM_ISTI) {
-				help = help->next;
+			racunposition pomocna = head->next;
+			while (UsporediDatume(pomocna, temp) != DATUM_ISTI) {
+				pomocna = pomocna->next;
 			}
 			free(temp);
-			temp = help;
+			temp = pomocna;
 		}
 		UcitajArtikleIzDatoteke(&temp->head, naziv);
 		temp = NULL;
