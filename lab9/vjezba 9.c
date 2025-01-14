@@ -105,7 +105,7 @@ node* insertRandom(node* root , int br){
     }
 
     for (i = 1; i < br; i++) {
-        insert(root, rand()/80+11);
+        insert(root, rand()%80+11);
     }
 
     return root;
