@@ -11,6 +11,8 @@ node* createNode(int value);
 node* insert(node* root, int value);
 node* search(node* root, int value);
 node* insertNiz(node* root, int niz[], int len);
+node* insertRandom(node* root , int br);
+int replace(node* root);
 int inorder(node* root);
 
 int main() {
@@ -92,3 +94,33 @@ int inorder(node* root) {
     }
     return 0;
 }
+
+node* insertRandom(node* root , int br){
+    int i;
+    if (root == NULL) {
+        root = insert(root, rand()/80+11);
+    }
+    else {
+        insert(root, rand()/80+11);
+    }
+
+    for (i = 1; i < br; i++) {
+        insert(root, rand()/80+11);
+    }
+
+    return root;
+}
+
+
+int replace(node* root){
+    int old;
+    
+    if(root == NULL){
+        return 0;
+    }
+    old= root.value;
+    root.value=replace(root.left)+replace(root.right);
+    
+    return root.value+old;
+
+};
